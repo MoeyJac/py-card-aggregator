@@ -45,7 +45,6 @@ def main():
     # Write aggregate card counts to file
     with open('AggregateCards.csv', 'w+', newline='', encoding='utf-8') as cardfile:
         fieldnames = list(nameToCountDict[list(nameToCountDict.keys())[0]].keys())
-        print(fieldnames)
         writer = csv.DictWriter(cardfile, fieldnames=fieldnames)
 
         writer.writeheader()
